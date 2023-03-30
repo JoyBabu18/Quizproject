@@ -1,16 +1,14 @@
-# This is a sample Python script.
+from question_bank import question_data
+from Questionmodel import Question
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print("Welcome to quiz master")
 
+question_objects = []
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for item in question_data:
+    question_text = item["question"]
+    question_answer = item["answer"]
+    new_question = Question(question_text, question_answer)
+    question_objects.append(new_question)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(question_objects[0])
