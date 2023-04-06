@@ -1,5 +1,6 @@
 from question_bank import question_data
 from Questionmodel import Question
+from brain import QuizBrain
 
 print("Welcome to quiz master")
 
@@ -11,4 +12,5 @@ for item in question_data:
     new_question = Question(question_text, question_answer)
     question_objects.append(new_question)
 
-print(question_objects[0])
+quiz = QuizBrain(question_objects)
+quiz.start_question()
