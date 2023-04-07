@@ -13,4 +13,6 @@ for item in question_data:
     question_objects.append(new_question)
 
 quiz = QuizBrain(question_objects)
-quiz.start_question()
+
+while quiz.still_has_questions():
+    quiz.start_question()
